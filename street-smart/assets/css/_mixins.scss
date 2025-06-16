@@ -61,7 +61,7 @@
     color: $mainBlue;
 }
 
-@mixin body-text($color) {
+@mixin body-text() {
     font-family: "acumin-variable", sans-serif;
     font-variation-settings: 'wght' 350, 'wdth' 110, 'slnt' 0;
     font-size: 19px;

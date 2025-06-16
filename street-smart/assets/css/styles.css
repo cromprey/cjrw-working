@@ -1,1 +1,306 @@
-/*# sourceMappingURL=styles.css.map */
+/* -- Colors -- */
+/* -- Global -- */
+/* -- Text Styles -- */
+/* -- Buttons -- */
+/* -- Containers -- */
+/*-- Intros -- */
+/* -- Forms -- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p {
+  margin: 0;
+}
+
+/* -- Header Area -- */
+header {
+  background-color: #487AB6;
+}
+header h1 {
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 70, "slnt" 0;
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 80px;
+  color: #E8EEF6;
+  margin: 0;
+}
+header p {
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
+  font-size: 19px;
+  margin: 0;
+  color: #E8EEF6;
+}
+
+.hero {
+  padding: 0 150px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 563px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px 0;
+  gap: 144px;
+}
+.hero-container .hero-logo img {
+  width: 256px;
+  height: auto;
+}
+.hero-container .hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hero-container .hero-content p {
+  max-width: 600px;
+  height: auto;
+}
+.hero-container .materials-card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  max-width: 393px;
+  text-align: center;
+  box-shadow: 3px 4px 4px 0px #3165b3;
+}
+.hero-container .materials-card h3 {
+  margin: 0;
+  font-family: "acumin-variable", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 30px;
+  color: #487AB6;
+}
+.hero-container .materials-card p {
+  color: #487AB6;
+}
+.hero-container .materials-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hero-container .materials-card form input[type=email] {
+  background-color: #E8EEF6;
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
+  font-size: 19px;
+  margin: 0;
+  color: #E8EEF6;
+  min-width: 348px;
+  padding: 5px 6px;
+  border: 0;
+  border-radius: 2px;
+}
+.hero-container .materials-card form button {
+  background-color: #F78334;
+  border-radius: 8px;
+  padding: 24px;
+  border: 0;
+  color: #fff;
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 600, "wdth" 70, "slnt" 0;
+  font-size: 21px;
+}
+
+/* -- Games Area -- */
+.games-container {
+  background-color: #083657;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 32px;
+  padding: 32px 0;
+}
+.games-container .games-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.games-container .games-intro h2 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 60px;
+  color: #E8EEF6;
+  margin: 0;
+}
+.games-container .games-intro p {
+  max-width: 640px;
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
+  font-size: 19px;
+  margin: 0;
+  color: #E8EEF6;
+}
+.games-container .games-wrapper {
+  padding: 0 100px 32px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 80px;
+  padding: 32px auto;
+}
+.games-container .games-wrapper .game {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.games-container .games-wrapper .game img {
+  max-width: 569px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.25);
+}
+.games-container .games-wrapper .game p {
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
+  font-size: 19px;
+  margin: 0;
+  color: #E8EEF6;
+  max-width: 640px;
+  max-width: 538px;
+}
+
+/* -- Videos Area -- */
+.carousel-container {
+  background-color: purple;
+  padding: 32px;
+  background-color: #3D9180;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+.carousel-container h2 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 60px;
+  color: #B9E2D9;
+  margin: 0;
+}
+.carousel-container .custom-video-container {
+  width: 800px;
+  margin: 0 auto;
+}
+.carousel-container .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* -- Learning Materials Area -- */
+.materials-wrapper {
+  background: linear-gradient(180deg, #083657 44.71%, #083657 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 32px 0;
+  font-family: "acumin-variable", sans-serif;
+  font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
+  font-size: 19px;
+  margin: 0;
+  color: #E8EEF6;
+  /* Hover state for the <a> */
+  /* Active <li> (gets .uk-active from uk-switcher) */
+  /* Yellow hover for the first item */
+  /* Teal hover for the second item */
+  /* Orange hover for the third item */
+  /* -- Switcher Area -- */
+}
+.materials-wrapper .materials-intro {
+  text-align: center;
+  color: #E8EEF6;
+}
+.materials-wrapper .materials-intro h2 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 60px;
+  color: #E8EEF6;
+  margin: 0;
+}
+.materials-wrapper .materials-intro p {
+  max-width: 640px;
+}
+.materials-wrapper .custom-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.materials-wrapper .custom-wrapper .grade-box img {
+  box-shadow: 3px 4px 15px 0px #041c2d;
+  border-radius: 20px;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box > a {
+  padding: 0;
+  background: transparent;
+  display: inline-block; /* Ensures shadow/border radius work */
+  border-radius: 20px; /* Optional, for consistent shape */
+  transition: box-shadow 0.3s ease;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box > a:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-radius: 20px;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box.uk-active > a {
+  background-color: transparent !important;
+  border-radius: 20px;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
+  box-shadow: 2px 5px 6px #F3CB4C;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
+  box-shadow: 2px 5px 6px #3D9180;
+}
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
+.materials-wrapper .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
+  box-shadow: 2px 5px 6px #F78334;
+}
+.materials-wrapper .uk-switcher {
+  min-width: 1130px;
+}
+.materials-wrapper .grade-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.materials-wrapper .grade-intro h3 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 60px;
+  color: #E8EEF6;
+  margin: 0;
+}
+.materials-wrapper .grade-intro p {
+  max-width: 640px;
+}
+.materials-wrapper .uk-switcher, .materials-wrapper .uk-card-body, .materials-wrapper .uk-card-footer {
+  text-align: left;
+}
+.materials-wrapper .sixth-container, .materials-wrapper .seventh-container, .materials-wrapper .eighth-container {
+  max-width: 1080px;
+}/*# sourceMappingURL=styles.css.map */
