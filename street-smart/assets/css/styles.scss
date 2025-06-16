@@ -104,6 +104,7 @@ header {
     @include videoContainer;
     h2{
         @include header2green;
+        padding: 0!important;
     }
     .custom-video-container{
         width: 800px;
@@ -206,4 +207,86 @@ header {
     .sixth-container, .seventh-container, .eighth-container{
         max-width: 1080px;
     }
+}
+
+/* -- About Section -- */
+
+#about {
+    display: flex;
+    justify-content: center;
+    @include aboutContainer;
+    h2{@include header2green;}
+    p {
+        @include body-text-teal;
+        @include introBodyWidth;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* -- Footer Section -- */
+
+.footer-wrapper {
+    @include footerContainer;
+    .footer-logos {
+        display: flex;
+        gap: 24px;
+        img{
+            max-height: 140px;
+        }
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .content-text{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            p{
+                @include body-text;
+                color: $white!important;
+            }
+            a{
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        .content-icons{
+            color: $white;
+            a {color: $white;}
+        }
+    }
+}
+
+.uk-flex {
+    background-color: $mainBlue!important;
+    margin: 0!important;
+    padding: 8px 48px 32px 48px;
+    span a {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+.custom-hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    position: relative;
+    top: 0.10em; /* Adjust this value to perfectly center it */
+}
+
+.custom-divider-text, .content-divider-text a {
+    background-color: $mainBlue;
+    @include body-text;
+    color: $white;
+    font-size: 14px;
+    margin: 0 10px;
+    font-weight: 500;
+    
 }
