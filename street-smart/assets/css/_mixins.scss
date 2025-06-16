@@ -1,0 +1,172 @@
+/* -- Global -- */
+
+@mixin globalStart {
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+    h1, p {
+    margin: 0;
+}
+
+}
+
+/* -- Text Styles -- */
+
+@mixin header1 {
+  font-family: "acumin-variable",sans-serif;
+  font-variation-settings: 'wght' 700, 'wdth' 70, 'slnt' 0;
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 80px;
+  color: $bodytxtBlue;
+  margin: 0;
+}
+
+@mixin header2 {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 60px;
+    color: $bodytxtBlue;
+    margin: 0;
+}
+
+@mixin header2green {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 60px;
+    color: $mainTeal;
+    margin: 0;
+}
+
+@mixin header3 {
+    font-family: "acumin-variable", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 59px;
+    color: $bodytxtBlue;
+}
+
+@mixin header-materials {
+    margin: 0;
+    font-family: "acumin-variable", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    color: $mainBlue;
+}
+
+@mixin body-text($color) {
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: 'wght' 350, 'wdth' 110, 'slnt' 0;
+    font-size: 19px;
+    margin: 0;
+    color: $bodytxtBlue;
+}
+
+@mixin button-text {
+    font-family: "acumin-variable",sans-serif;
+    font-variation-settings: 'wght' 600, 'wdth' 70, 'slnt' 0;
+    font-size: 21px;
+}
+
+
+/* -- Buttons -- */
+
+@mixin primaryButton {
+    background-color: $mainOrange;
+    border-radius: 8px;
+    padding: 24px;
+    border: 0;
+    color: $white;
+    @include button-text;
+}
+
+
+/* -- Containers -- */
+
+@mixin heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 563px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px 0;
+}
+
+@mixin gamesContainer {
+    background-color: $mainDarkBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+    padding: 32px 0;
+}
+
+@mixin gamesWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    padding: 32px auto;
+}
+
+@mixin gameIMG {
+    max-width: 569px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 25%);
+}
+
+@mixin videoContainer {
+    background-color: $darkTeal5;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;  
+}
+
+@mixin materialsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 0;
+}
+
+
+/*-- Intros -- */
+
+@mixin introBodyWidth {
+    max-width: 640px;
+}
+
+/* -- Forms -- */
+
+@mixin formInput{
+    background-color: $lightBlue7;
+    @include body-text();
+    min-width: 348px;
+    padding: 5px 6px;
+    border: 0;
+    border-radius: 2px;
+}
+
+@mixin classroomMaterials {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    max-width: 393px;
+    text-align: center;
+    box-shadow: 3px 4px 4px 0px $boxShadowBlue;
+}
+

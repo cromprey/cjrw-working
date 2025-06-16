@@ -1,0 +1,209 @@
+@import './variables';
+@import './mixins';
+
+
+@include globalStart;
+
+
+/* -- Header Area -- */
+
+header {
+    background-color: $mainBlue;
+    h1 {
+        @include header1;
+    }
+    p {
+        @include body-text;
+    }
+}
+
+.hero {
+    padding: 0 150px;
+}
+
+.hero-container {
+    @include heroContainer;
+    gap: 144px;
+    .hero-logo img {
+        width: 256px;
+        height: auto;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        p {
+            max-width: 600px;
+            height: auto;
+        }
+    }
+
+    .materials-card {
+        @include classroomMaterials;
+        h3{
+            @include header-materials;
+        }
+        p {
+            color: $mainBlue;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            input[type="email"] {
+                @include formInput;
+            }
+            button {
+            @include primaryButton;
+        }
+        }
+
+        
+    }
+}
+
+/* -- Games Area -- */
+
+.games-container {
+    @include gamesContainer;
+    .games-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {@include header2;}
+        p{
+            @include introBodyWidth;
+            @include body-text;
+        }
+    }
+    .games-wrapper{
+        padding: 0 100px 32px 100px;
+        @include gamesWrapper;
+        .game {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            img{
+                @include gameIMG;
+            }
+            p{
+                @include body-text;
+                @include introBodyWidth;
+                max-width: 538px;
+            }
+        }
+    }
+}
+
+/* -- Videos Area -- */
+
+.carousel-container {
+    background-color: purple;
+    padding: 32px;
+    @include videoContainer;
+    h2{
+        @include header2green;
+    }
+    .custom-video-container{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+/* -- Learning Materials Area -- */
+
+.materials-wrapper {
+    background: linear-gradient(180deg, $mainDarkBlue 44.71%, #083657 100%);
+    @include materialsContainer;
+    @include body-text;
+    .materials-intro{
+        h2{@include header2}
+        text-align: center;
+        color: $lightBlue7;
+        p{
+            @include introBodyWidth;
+        }
+    }
+    .custom-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        .grade-box{
+            img{
+                 box-shadow: 3px 4px 15px 0px #041c2d;
+                border-radius: 20px;
+            }
+        }
+    }
+    .uk-subnav-pill > .grade-box > a {
+        padding: 0;
+        background: transparent;
+        display: inline-block; /* Ensures shadow/border radius work */
+        border-radius: 20px;    /* Optional, for consistent shape */
+        transition: box-shadow 0.3s ease;
+    }
+
+    /* Hover state for the <a> */
+    .uk-subnav-pill > .grade-box > a:hover {
+        background-color: transparent !important;
+        color: inherit !important;
+        border-radius: 20px;
+    }
+
+    /* Active <li> (gets .uk-active from uk-switcher) */
+    .uk-subnav-pill > .grade-box.uk-active > a {
+        background-color: transparent !important;
+        border-radius: 20px;
+    }
+    /* Yellow hover for the first item */
+    .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
+        box-shadow: 2px 5px 6px $mainYellow;
+    }
+
+    /* Teal hover for the second item */
+    .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
+        box-shadow: 2px 5px 6px $darkTeal5;
+    }
+
+    /* Orange hover for the third item */
+    .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
+        box-shadow: 2px 5px 6px $mainOrange;
+    }
+
+    /* -- Switcher Area -- */
+    .uk-switcher {
+        min-width: 1130px;
+    }
+
+    .grade-intro {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        h3 {
+            @include header2;
+        }
+        p{
+            @include introBodyWidth;
+        }
+    }
+
+    .uk-switcher, .uk-card-body, .uk-card-footer{
+        text-align: left;
+    }
+
+    .sixth-container, .seventh-container, .eighth-container{
+        max-width: 1080px;
+    }
+}
