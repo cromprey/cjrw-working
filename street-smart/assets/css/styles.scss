@@ -167,13 +167,24 @@ header {
             @include introBodyWidth;
         }
     }
+
+    .uk-subnav-pill>* {
+    padding-left: 0px;
+    }
+
+    .uk-subnav-pill {
+    margin-left: 0;
+    }
+
     .custom-wrapper {
+        margin: 0;
+        padding: 0px 32px;
         display: flex;
         justify-content: center;
         gap: 80px;
         .grade-box{
             img{
-                 box-shadow: 3px 4px 15px 0px #041c2d;
+                box-shadow: 3px 4px 15px 0px #041c2d;
                 border-radius: 20px;
             }
         }

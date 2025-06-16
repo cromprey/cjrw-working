@@ -274,7 +274,15 @@ header p {
 .materials-wrapper .materials-intro p {
   max-width: 640px;
 }
+.materials-wrapper .uk-subnav-pill > * {
+  padding-left: 0px;
+}
+.materials-wrapper .uk-subnav-pill {
+  margin-left: 0;
+}
 .materials-wrapper .custom-wrapper {
+  margin: 0;
+  padding: 0px 32px;
   display: flex;
   justify-content: center;
   gap: 80px;
