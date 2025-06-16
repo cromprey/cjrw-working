@@ -85,6 +85,15 @@
     font-size: 21px;
 }
 
+@mixin lessonText {
+    font-family: "acumin-variable",sans-serif;
+    font-variation-settings: 'wght' 700, 'wdth' 90, 'slnt' 0;
+}
+@mixin viewText {
+    font-family: "acumin-variable",sans-serif;
+    font-variation-settings: 'wght' 500, 'wdth' 100, 'slnt' 0;
+}
+
 
 /* -- Buttons -- */
 
