@@ -47,8 +47,8 @@ header p {
   min-height: 563px;
   margin: 0 auto;
   text-align: left;
-  padding: 20px 0;
-  gap: 144px;
+  padding: 32px 0;
+  gap: 104px;
 }
 .hero-container .hero-logo img {
   width: 256px;
@@ -510,11 +510,124 @@ header p {
 }
 
 /* -- Media Query Stuff -- */
-@media (max-width: 768px) {
-  .custom-arrow.left-arrow {
-    left: 0;
+/* -- Media Queries -- */
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  header {
+    background: orange;
   }
-  .custom-arrow.right-arrow {
-    right: 0;
+  header h1 {
+    font-size: 56px;
+    line-height: 1;
+  }
+  header p {
+    font-size: 16px;
+  }
+  .hero {
+    padding: 0 40px;
+  }
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: auto;
+    padding: 20px;
+  }
+  .hero-container .hero-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .hero-container .hero-highlight .hero-content {
+    gap: 8px;
+  }
+  .hero-container .hero-logo img {
+    width: 200px;
+  }
+  .hero-container .materials-card {
+    max-width: 100%;
+    width: 350px;
+    padding: 24px 16px;
+  }
+  .games-container .games-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 20px 32px 20px;
+  }
+  .games-container .games-wrapper .game {
+    align-items: center;
+  }
+  .games-container .games-wrapper .game img {
+    max-width: 700px;
+  }
+  .carousel-container .custom-video-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  .materials-wrapper .custom-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+  header {
+    background-color: purple;
+  }
+  header h1 {
+    font-size: 48px;
+    line-height: 36px;
+    padding: 0 10px;
+  }
+  header p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .hero {
+    padding: 0 20px;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    min-height: auto;
+    padding: 10px 0;
+  }
+  .hero-container .hero-logo img {
+    width: 180px;
+    margin: 0 auto;
+  }
+  .hero-container .hero-content {
+    align-items: center;
+  }
+  .hero-container .materials-card {
+    max-width: 393px;
+    width: 100%;
+    padding: 20px;
+  }
+  .games-container .games-wrapper {
+    flex-direction: column;
+    padding: 0 15px 32px 15px;
+    gap: 24px;
+  }
+  .games-container .games-wrapper .game img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  .carousel-container .custom-video-container {
+    width: 100%;
+  }
+  .materials-wrapper .custom-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 10px;
+  }
+  .materials-wrapper .materials-intro h2 {
+    font-size: 36px;
+  }
+  .materials-wrapper .materials-intro p {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
