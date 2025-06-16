@@ -514,7 +514,7 @@ header p {
 /* Tablet (768px - 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
   header {
-    background: orange;
+    background: hotpink;
   }
   header h1 {
     font-size: 56px;
@@ -547,8 +547,8 @@ header p {
     width: 200px;
   }
   .hero-container .materials-card {
-    max-width: 100%;
-    width: 350px;
+    /* max-width: 100%; */
+    width: 500px;
     padding: 24px 16px;
   }
   .games-container .games-wrapper {
@@ -586,12 +586,12 @@ header p {
     padding: 0 10px;
   }
   .hero {
-    padding: 0 20px;
+    padding: 20 20px;
   }
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 32px;
+    gap: 24px;
     min-height: auto;
     padding: 10px 0;
   }
@@ -599,8 +599,19 @@ header p {
     width: 180px;
     margin: 0 auto;
   }
+  .hero-container .hero-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .hero-container .hero-highlight .hero-content {
+    gap: 16px;
+  }
   .hero-container .hero-content {
     align-items: center;
+    gap: 8px;
   }
   .hero-container .materials-card {
     max-width: 393px;
