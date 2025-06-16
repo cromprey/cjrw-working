@@ -99,7 +99,6 @@ header {
 /* -- Videos Area -- */
 
 .carousel-container {
-    background-color: purple;
     padding: 32px;
     @include videoContainer;
     h2{
@@ -118,6 +117,40 @@ header {
         height: 100%;
         border: 0;
     }
+ .custom-video-container {
+  position: relative; // so arrows position relative to the video
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: auto;
+    fill: $darkTeal7; // your green color
+  }
+
+  &.left-arrow {
+    left: -56px; // 40px outside the left edge
+  }
+
+  &.right-arrow {
+    right: -56px; // 40px outside the right edge
+  }
+}
 }
 
 /* -- Learning Materials Area -- */
@@ -289,11 +322,12 @@ header {
 
 .footer-wrapper {
     @include footerContainer;
+    gap: 24px;
     .footer-logos {
         display: flex;
         gap: 24px;
         img{
-            max-height: 140px;
+            max-height: 104px;
         }
     }
     .footer-content{
@@ -346,4 +380,16 @@ header {
     margin: 0 10px;
     font-weight: 500;
     
+}
+
+
+/* -- Media Query Stuff -- */
+
+@media (max-width: 768px) {
+  .custom-arrow.left-arrow {
+    left: 0;
+  }
+  .custom-arrow.right-arrow {
+    right: 0;
+  }
 }
