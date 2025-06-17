@@ -78,14 +78,21 @@ header {
         }
     }
     .games-wrapper{
-        padding: 0 100px 32px 100px;
+        padding: 0 80px 32px 80px; // keep horizontal padding smaller than before, matches gap
         @include gamesWrapper;
+        display: flex;            // Make wrapper flexbox
+        flex-wrap: wrap;          // Allow wrapping on smaller screens
+        justify-content: center;  // Center items horizontally
+        gap: 80px;
         .game {
             display: flex;
             flex-direction: column;
             gap: 24px;
+            max-width: 480px;          // limit max width of each game card
+            flex: 1 1 300px;           // flex-grow, flex-shrink, flex-basis to be responsive
             img{
                 @include gameIMG;
+                max-width: 100%;         // ensure images never exceed container width
             }
             p{
                 @include body-text;
@@ -181,6 +188,7 @@ header {
         padding: 0px 32px;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 80px;
         .grade-box{
             img{
@@ -393,93 +401,225 @@ header {
     
 }
 
+/* -------------------- Media Queries ---------------------- */
 
-/* -- Media Query Stuff -- */
-
-/* -- Media Queries -- */
-
-/* Tablet (768px - 1023px) */
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
-    background: hotpink;
     h1 {
       font-size: 56px;
-      line-height: 1;
+      line-height: 54px;
+      padding: 0 24px;
     }
     p {
-      font-size: 16px;
+      @include body-text; // slightly larger than mobile
     }
   }
 
-  
-
   .hero {
-    padding: 0 40px;
+    padding: 40px 40px;
   }
 
   .hero-container {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     gap: 32px;
-    min-height: auto;
-    padding: 20px;
-
-    .hero-highlight {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 16px;
-        .hero-content{
-            gap: 8px;
-        }
-    }
+    padding: 20px 0;
 
     .hero-logo img {
-      width: 200px;
+      width: 220px;
+    }
+
+    .hero-highlight {
+      gap: 24px;
+    }
+
+    .hero-content {
+      align-items: center;
+      gap: 16px;
     }
 
     .materials-card {
-      /* max-width: 100%; */
-      width: 500px;
-      padding: 24px 16px;
+      max-width: 540px;
+      width: 100%;
+      padding: 32px;
+      gap: 20px;
     }
   }
 
+  .games-intro h2,
+  .materials-intro h2,
+  .carousel-container h2,
+  .about-container h2,
+  .grade-intro h2 {
+    font-size: 48px !important;
+  }
+
   .games-container {
+    padding: 40px;
+    gap: 32px;
+
+    .games-intro {
+      p {
+        @include body-text;
+      }
+    }
+
     .games-wrapper {
       flex-direction: column;
       gap: 32px;
-      padding: 0 20px 32px 20px;
-      
+      padding: 0 24px;
+      align-items: center;
       .game {
         align-items: center;
+
         img {
-          max-width: 700px;
+          max-width: 100%;
+        }
+
+        p {
+          @include body-text;
         }
       }
     }
   }
 
   .carousel-container {
+    padding: 40px 40px 0 40px;
+
     .custom-video-container {
       width: 100%;
-      max-width: 600px;
+    }
+
+    .custom-arrow {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 70%;
+      }
+
+      &.left-arrow {
+        left: -40px;
+      }
+
+      &.right-arrow {
+        right: -40px;
+      }
     }
   }
 
   .materials-wrapper {
-    .custom-wrapper {
-      flex-direction: column;
-      gap: 32px;
-    }
-    }
-}
+    padding: 40px 32px;
+    gap: 32px;
 
-/* Mobile (below 768px) */
+    .materials-intro {
+      p {
+        @include body-text;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+    }
+
+    .custom-wrapper {
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .grade-box {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    /*.uk-switcher {
+      width: 100%;
+
+      .grade-intro {
+        padding: 0 0 24px 0;
+
+        h3 {
+          font-size: 40px !important;
+        }
+
+        p {
+          @include body-text;
+        }
+      }
+    }*/
+    .uk-switcher {
+      background-color: purple!important;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px;
+      width: 100%;
+      min-width: 0!important;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .custom-card {
+        flex: 1 1 300px; // flexible width
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+  }
+
+  #about {
+    padding: 40px;
+
+    .about-container {
+      p {
+        @include body-text;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    padding: 40px 40px 0 40px;
+    gap: 24px;
+
+    .footer-logos {
+      justify-content: center;
+      gap: 24px;
+
+      img {
+        max-height: 60px;
+      }
+    }
+
+    .footer-content {
+      .content-text {
+        p,
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .uk-flex.uk-flex-middle.uk-text-center.uk-margin {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .custom-divider-text {
+    font-size: 14px;
+  }
+
+  .custom-hr {
+    width: 70%;
+  }
+}
+/* --------- Mobile (below 768px) ---------*/
 @media (max-width: 767px) {
   header {
-    background-color: purple;
     h1 {
       font-size: 48px;
       line-height: 45px;
@@ -528,8 +668,6 @@ header {
       padding: 20px;
       gap: 16px;
     }
-
-
   }
 
   .games-intro h2, .materials-intro h2, .carousel-container h2, .about-container h2, .grade-intro h2 {
@@ -548,6 +686,7 @@ header {
       flex-direction: column;
       padding: 0 16px 16px 16px;
       gap: 24px;
+      align-items: center;
       .game {
         align-items: center;
         img {
@@ -567,31 +706,30 @@ header {
       width: 100%;
     }
     .custom-arrow {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 40px;
-  height: 40px;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 40px;
+      height: 40px;
 
-  svg {
-    width: 65%;
-    height: auto;
-    fill: $white // your green color
-  }
+      svg {
+        width: 65%;
+        height: auto;
+        fill: $darkTeal7; // your green color
+      }
 
-  &.left-arrow {
-    left: -32px; // 40px outside the left edge
-  }
+      &.left-arrow {
+        left: -32px; // 40px outside the left edge
+      }
 
-  &.right-arrow {
-    right: -32px; // 40px outside the right edge
-  }
-  }
+      &.right-arrow {
+        right: -32px; // 40px outside the right edge
+      }
+    }
   }
 
   .materials-wrapper {
-    background: purple!important;
     align-items: flex-start;
     padding: 20px!important;
     gap: 24px;
@@ -606,11 +744,10 @@ header {
       display: flex;
       justify-content: center; // ✅ This centers the grade-boxes
       gap: 32px;
-      background: orange;
     }
 
     .grade-box {
-      max-width: px; // or whatever looks good
+      max-width: 300px; // or whatever looks good
       width: 100%;
       height: auto;
       object-fit: contain;
@@ -626,10 +763,13 @@ header {
     }
 
   .uk-switcher {
+    background-color: violet!important;
     width: 100%;
     min-width: 0; // override if needed
+    text-align: center;
     .grade-intro {
-        h3{font-size: 40px!important;}
+      padding: 0 0 16px 0;
+        h3{font-size: 35px!important;}
         p {
           @include body-text-mobile;
           padding: 0;
@@ -657,11 +797,11 @@ header {
     .footer-logos {
       justify-content: center; // center logos
       gap: 16px;
-      flex-wrap: wrap;
+      flex-direction: row;
       img{
-        max-width: 100px; // adjust size to stay within screen width
-        width: 100%;
-        height: auto;
+        max-height: 50px; // adjust size to stay within screen width
+        width: auto;
+        height: 100%;
       }
     }
     .footer-content {
