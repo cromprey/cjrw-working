@@ -18,12 +18,21 @@ header {
 }
 
 .hero {
-    padding: 0 150px;
+    padding: 0 24px; // Reduce global padding (optional, better for small screens)
+
 }
 
 .hero-container {
     @include heroContainer;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     gap: 104px;
+    .hero-highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
     .hero-logo img {
         width: 256px;
         height: auto;
@@ -123,6 +132,8 @@ header {
         width: 100%;
         height: 100%;
         border-radius: 12px;
+        overflow: hidden;
+      }
     }
  .custom-video-container {
   position: relative; // so arrows position relative to the video
@@ -177,7 +188,7 @@ header {
     right: -56px; // 40px outside the right edge
   }
 }
-}
+
 
 /* -- Learning Materials Area -- */
 
@@ -203,15 +214,17 @@ header {
     }
 
     .custom-wrapper {
-       display: flex;
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 72px;
+      gap: 48px;
       padding: 0 16px;
       margin: 0 auto;
         .grade-box{
             img{
+                max-width: 360px;
+                width: 100%;
                 box-shadow: 3px 4px 15px 0px #041c2d;
                 border-radius: 20px;
             }
@@ -240,19 +253,19 @@ header {
     /* Yellow hover for the first item */
     .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
-        box-shadow: 2px 5px 6px $mainYellow;
+        box-shadow: 4px 5px 6px $mainYellow;
     }
 
     /* Teal hover for the second item */
     .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
-        box-shadow: 2px 5px 6px $darkTeal5;
+        box-shadow: 4px 5px 6px $darkTeal5;
     }
 
     /* Orange hover for the third item */
     .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
-        box-shadow: 2px 5px 6px $mainOrange;
+        box-shadow: 4px 5px 6px $mainOrange;
     }
 
     /* -- Switcher Area -- */
@@ -428,13 +441,14 @@ header {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
+    background: lime;
     h1 {
       font-size: 56px;
       line-height: 54px;
       padding: 0 24px;
     }
     p {
-      @include body-text; // slightly larger than mobile
+      @include body-text-tablet; // slightly larger than mobile
     }
   }
 
@@ -462,7 +476,7 @@ header {
     }
 
     .materials-card {
-      max-width: 540px;
+      max-width: 393px;
       width: 100%;
       padding: 32px;
       gap: 20px;
@@ -483,7 +497,7 @@ header {
 
     .games-intro {
       p {
-        @include body-text;
+        @include body-text-tablet;
       }
     }
 
@@ -549,7 +563,7 @@ header {
 
     .custom-wrapper {
       justify-content: center;
-      gap: 40px;
+      gap: 32px;
     }
 
     .grade-box {
@@ -670,7 +684,7 @@ header {
     }
 
     .hero-highlight {
-         display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -686,10 +700,21 @@ header {
     }
 
     .materials-card {
-      max-width: 393px;
+      h3{
+        font-size: 24px;
+        line-height: 24px;
+      }
+      max-width: 293px;
       width: 100%;
       padding: 20px;
       gap: 16px;
+      .hero-container .materials-card form {
+        gap: 16px;
+      }
+      .form-button {
+        padding: 8px;
+        font-size: 16px;
+      }
     }
   }
 
@@ -743,11 +768,11 @@ header {
       }
 
       &.left-arrow {
-        left: -32px; // 40px outside the left edge
+        left: -35px; // 40px outside the left edge
       }
 
       &.right-arrow {
-        right: -32px; // 40px outside the right edge
+        right: -35px; // 40px outside the right edge
       }
     }
   }
@@ -765,15 +790,19 @@ header {
     }
     .custom-wrapper {
       display: flex;
-      justify-content: center; // ✅ This centers the grade-boxes
-      gap: 32px;
+      justify-content: center;
+      gap: 16px;
+      padding: 0;
     }
 
     .grade-box {
-      max-width: 300px; // or whatever looks good
+      max-width: 100px; // or whatever looks good
       width: 100%;
       height: auto;
       object-fit: contain;
+      img {
+        border-radius: 2px!important;
+      }
     }
 
     .materials-intro {
@@ -786,7 +815,6 @@ header {
     }
 
   .uk-switcher {
-    background-color: violet!important;
     width: 100%;
     min-width: 0; // override if needed
     text-align: center;
@@ -800,8 +828,55 @@ header {
       }
   }
 
+     /* Hover state for the <a> */
+    .uk-subnav-pill > .grade-box > a:hover {
+        background-color: transparent !important;
+        color: inherit !important;
+        border-radius: 2px;
+    }
+
+    /* Active <li> (gets .uk-active from uk-switcher) */
+    .uk-subnav-pill > .grade-box.uk-active > a {
+        background-color: transparent !important;
+        border-radius: 2px;
+    }
+    /* Yellow hover for the first item */
+    .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
+        box-shadow: 4px 5px 6px $mainYellow;
+    }
+
+    /* Teal hover for the second item */
+    .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
+        box-shadow: 4px 5px 6px $darkTeal5;
+    }
+
+    /* Orange hover for the third item */
+    .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
+    .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
+        box-shadow: 4px 5px 6px $mainOrange;
+    }
+
+    /* -- Switcher Area -- */
+    .uk-switcher {
+      width: 100%;
+      max-width: 1130px; // or remove if you want full flexibility
+      box-sizing: border-box;
+      padding: 0 16px; // adds breathing room
+    }
+
   .custom-card {
     width: 100%;
+    .custom-card-body{
+      h4{
+        font-size: 13px;
+        margin: 0 0 10px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
   }
 }
 
