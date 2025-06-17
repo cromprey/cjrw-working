@@ -88,7 +88,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 24px;
-            max-width: 480px;          // limit max width of each game card
+            max-width: 570px;          // limit max width of each game card
             flex: 1 1 300px;           // flex-grow, flex-shrink, flex-basis to be responsive
             img{
                 @include gameIMG;
@@ -184,12 +184,13 @@ header {
     }
 
     .custom-wrapper {
-        margin: 0;
-        padding: 0px 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 80px;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 72px;
+      padding: 0 16px;
+      margin: 0 auto;
         .grade-box{
             img{
                 box-shadow: 3px 4px 15px 0px #041c2d;
@@ -237,7 +238,10 @@ header {
 
     /* -- Switcher Area -- */
     .uk-switcher {
-        min-width: 1130px;
+      width: 100%;
+      max-width: 1130px; // or remove if you want full flexibility
+      box-sizing: border-box;
+      padding: 0 16px; // adds breathing room
     }
 
     .grade-intro {

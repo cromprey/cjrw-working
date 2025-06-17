@@ -163,7 +163,7 @@ header p {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 480px;
+  max-width: 570px;
   flex: 1 1 300px;
 }
 .games-container .games-wrapper .game img {
@@ -289,12 +289,13 @@ header p {
   margin-left: 0;
 }
 .materials-wrapper .custom-wrapper {
-  margin: 0;
-  padding: 0px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  flex-wrap: wrap;
+  gap: 72px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 .materials-wrapper .custom-wrapper .grade-box img {
   box-shadow: 3px 4px 15px 0px #041c2d;
@@ -329,7 +330,10 @@ header p {
   box-shadow: 2px 5px 6px #F78334;
 }
 .materials-wrapper .uk-switcher {
-  min-width: 1130px;
+  width: 100%;
+  max-width: 1130px;
+  box-sizing: border-box;
+  padding: 0 16px;
 }
 .materials-wrapper .grade-intro {
   display: flex;
