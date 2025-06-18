@@ -345,15 +345,15 @@ header p {
 }
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
-  box-shadow: 4px 5px 6px #F3CB4C;
+  box-shadow: 4px 5px 10px #F3CB4C;
 }
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
-  box-shadow: 4px 5px 6px #3D9180;
+  box-shadow: 4px 5px 10px #3D9180;
 }
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
 .materials-wrapper .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
-  box-shadow: 4px 5px 6px #F78334;
+  box-shadow: 4px 5px 10px #F78334;
 }
 .materials-wrapper .uk-switcher {
   width: 100%;
@@ -578,9 +578,6 @@ header p {
 
 /* -------------------- Media Queries ---------------------- */
 @media (min-width: 768px) and (max-width: 1024px) {
-  header {
-    background: lime;
-  }
   header h1 {
     font-size: 56px;
     line-height: 54px;
@@ -988,7 +985,7 @@ header p {
   .materials-wrapper .uk-subnav-pill > .grade-box > a:hover {
     background-color: transparent !important;
     color: inherit !important;
-    border-radius: 2px;
+    border-radius: 5px;
   }
   .materials-wrapper .uk-subnav-pill > .grade-box.uk-active > a {
     background-color: transparent !important;

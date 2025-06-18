@@ -8,9 +8,9 @@
 /* -- Header Area -- */
 
 header {
-    background-color: $mainBlue;
-    h1 {
-        @include header1;
+  background-color: $mainBlue;
+  h1 {
+      @include header1;
     }
     p {
         @include body-text;
@@ -18,8 +18,7 @@ header {
 }
 
 .hero {
-    padding: 0 24px; // Reduce global padding (optional, better for small screens)
-
+    padding: 0 24px;
 }
 
 .hero-container {
@@ -37,7 +36,6 @@ header {
         width: 256px;
         height: auto;
     }
-
     .hero-content {
         display: flex;
         flex-direction: column;
@@ -47,7 +45,6 @@ header {
             height: auto;
         }
     }
-
     .materials-card {
         @include classroomMaterials;
         h3{
@@ -64,11 +61,9 @@ header {
                 @include formInput;
             }
             button {
-            @include primaryButton;
-        }
-        }
-
-        
+              @include primaryButton;
+            }
+      }
     }
 }
 
@@ -82,8 +77,8 @@ header {
         align-items: center;
         h2 {@include header2;}
         p{
-            @include introBodyWidth;
-            @include body-text;
+          @include introBodyWidth;
+          @include body-text;
         }
     }
     .games-wrapper{
@@ -173,22 +168,18 @@ header {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
   svg {
     width: 100%;
     height: auto;
     fill: $darkTeal7; // your green color
   }
-
   &.left-arrow {
     left: -56px; // 40px outside the left edge
   }
-
   &.right-arrow {
     right: -56px; // 40px outside the right edge
   }
 }
-
 
 /* -- Learning Materials Area -- */
 
@@ -223,10 +214,10 @@ header {
       margin: 0 auto;
         .grade-box{
             img{
-                max-width: 360px;
-                width: 100%;
-                box-shadow: 3px 4px 15px 0px #041c2d;
-                border-radius: 20px;
+              max-width: 360px;
+              width: 100%;
+              box-shadow: 3px 4px 15px 0px #041c2d;
+              border-radius: 20px;
             }
         }
     }
@@ -253,19 +244,17 @@ header {
     /* Yellow hover for the first item */
     .uk-subnav-pill > .grade-box:nth-child(1) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(1).uk-active > a {
-        box-shadow: 4px 5px 6px $mainYellow;
+        box-shadow: 4px 5px 10px $mainYellow;
     }
-
     /* Teal hover for the second item */
     .uk-subnav-pill > .grade-box:nth-child(2) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(2).uk-active > a {
-        box-shadow: 4px 5px 6px $darkTeal5;
+        box-shadow: 4px 5px 10px $darkTeal5;
     }
-
     /* Orange hover for the third item */
     .uk-subnav-pill > .grade-box:nth-child(3) > a:hover,
     .uk-subnav-pill > .grade-box:nth-child(3).uk-active > a {
-        box-shadow: 4px 5px 6px $mainOrange;
+        box-shadow: 4px 5px 10px $mainOrange;
     }
 
     /* -- Switcher Area -- */
@@ -364,14 +353,14 @@ header {
     @include aboutContainer;
     h2{@include header2green;}
     p {
-        @include body-text-teal;
-        @include introBodyWidth;
+      @include body-text-teal;
+      @include introBodyWidth;
     }
     .about-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
 }
 
@@ -420,40 +409,39 @@ header {
   width: 100%;
   box-sizing: border-box;
     span a {
-        color: $white;
-        text-decoration: underline;
+      color: $white;
+      text-decoration: underline;
     }
 }
 
 .custom-hr {
-    margin: 0;
-    border: none;
-    border-top: 1px solid #ccc;
-    position: relative;
-    top: 0.10em; /* Adjust this value to perfectly center it */
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+  position: relative;
+  top: 0.10em; /* Adjust this value to perfectly center it */
 }
 
 .custom-divider-text, .content-divider-text a {
-    padding: 0!important;
-    background-color: $mainBlue;
-    @include body-text;
-    color: $white;
-    font-size: 14px;
-    margin: 0 10px;
-    font-weight: 500;
-    white-space: normal !important;  // allow wrapping (override nowrap)
-    word-wrap: break-word;           // break long words if needed
-    overflow-wrap: break-word;
-    max-width: 100%;
-    display: inline-block;           // so max-width applies properly
-    box-sizing: border-box;
+  padding: 0!important;
+  background-color: $mainBlue;
+  @include body-text;
+  color: $white;
+  font-size: 14px;
+  margin: 0 10px;
+  font-weight: 500;
+  white-space: normal !important;  // allow wrapping (override nowrap)
+  word-wrap: break-word;           // break long words if needed
+  overflow-wrap: break-word;
+  max-width: 100%;
+  display: inline-block;           // so max-width applies properly
+  box-sizing: border-box;
 }
 
 /* -------------------- Media Queries ---------------------- */
 
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
-    background: lime;
     h1 {
       font-size: 56px;
       line-height: 54px;
@@ -493,7 +481,7 @@ header {
       padding: 32px;
       gap: 20px;
     }
-  }
+    }
 
   .games-intro h2,
   .materials-intro h2,
@@ -687,6 +675,7 @@ header {
     width: 70%;
   }
 }
+
 /* --------- Mobile (below 768px) ---------*/
 @media (max-width: 767px) {
   header {
@@ -870,7 +859,7 @@ header {
     .uk-subnav-pill > .grade-box > a:hover {
         background-color: transparent !important;
         color: inherit !important;
-        border-radius: 2px;
+        border-radius: 5px;
     }
 
     /* Active <li> (gets .uk-active from uk-switcher) */
