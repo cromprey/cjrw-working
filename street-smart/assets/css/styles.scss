@@ -273,7 +273,7 @@ header {
       width: 100%;
       max-width: 1130px; // or remove if you want full flexibility
       box-sizing: border-box;
-      padding: 0 16px; // adds breathing room
+      padding: 0 24px;
     }
 
     .grade-intro {
@@ -284,6 +284,7 @@ header {
         }
         p{
             @include introBodyWidth;
+            padding: 0 6px;
         }
     }
 
@@ -453,14 +454,14 @@ header {
   }
 
   .hero {
-    padding: 40px 40px;
+    padding: 32px;
   }
 
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 32px;
-    padding: 20px 0;
+    gap: 24px;
+    padding: 24px 0;
 
     .hero-logo img {
       width: 220px;
@@ -492,7 +493,7 @@ header {
   }
 
   .games-container {
-    padding: 40px;
+    padding: 32px;
     gap: 32px;
 
     .games-intro {
@@ -514,14 +515,15 @@ header {
         }
 
         p {
-          @include body-text;
+          @include body-text-tablet;
         }
       }
     }
   }
 
   .carousel-container {
-    padding: 40px 40px 0 40px;
+    padding: 24 49 4px;
+    gap: 16px;
 
     .custom-video-container {
       width: 100%;
@@ -538,22 +540,22 @@ header {
       }
 
       &.left-arrow {
-        left: -40px;
+        left: -48px;
       }
 
       &.right-arrow {
-        right: -40px;
+        right: -48px;
       }
     }
   }
 
   .materials-wrapper {
-    padding: 40px 32px;
-    gap: 32px;
+    padding: 32px;
+    gap: 24px;
 
     .materials-intro {
       p {
-        @include body-text;
+        @include body-text-tablet;
       }
 
       h2 {
@@ -569,6 +571,14 @@ header {
     .grade-box {
       width: 100%;
       max-width: 200px;
+    }
+
+    .grade-intro {
+      padding: 0 0px 16px;
+      p {
+        @include body-text-tablet;
+        padding: 0 6px!important;
+      }
     }
 
     /*.uk-switcher {
@@ -587,7 +597,6 @@ header {
       }
     }*/
     .uk-switcher {
-      background-color: purple!important;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -604,21 +613,31 @@ header {
         flex: 1 1 300px; // flexible width
         max-width: 100%;
         box-sizing: border-box;
+        .custom-card-body {
+          h4{
+            font-size: 15px;
+            margin: 0 0 10px;
+          }
+          p{
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
     }
   }
 
   #about {
-    padding: 40px;
+    padding: 32px;
 
     .about-container {
       p {
-        @include body-text;
+        @include body-text-tablet;
       }
     }
   }
 
   .footer-wrapper {
-    padding: 40px 40px 0 40px;
+    padding: 32px 32px 0 32px;
     gap: 24px;
 
     .footer-logos {
@@ -626,7 +645,7 @@ header {
       gap: 24px;
 
       img {
-        max-height: 60px;
+        max-height: 80px;
       }
     }
 
@@ -643,10 +662,10 @@ header {
   .uk-flex.uk-flex-middle.uk-text-center.uk-margin {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
   }
 
   .custom-divider-text {
+    padding: 8px;
     font-size: 14px;
   }
 
