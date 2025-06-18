@@ -279,6 +279,7 @@ header {
     .grade-intro {
         display: flex;
         flex-direction: column;
+        padding: 0 0 16px;
         h3 {
             @include header2;
         }
@@ -399,6 +400,7 @@ header {
                 color: $white!important;
             }
             a{
+                @include body-text;
                 color: $white;
                 text-decoration: underline;
             }
@@ -411,9 +413,12 @@ header {
 }
 
 .uk-flex {
-    background-color: $mainBlue!important;
-    margin: 0!important;
-    padding: 8px 48px 32px 48px;
+  background-color: $mainBlue !important;
+  margin: 0 auto !important;
+  padding: 0px 24px 32px 24px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
     span a {
         color: $white;
         text-decoration: underline;
@@ -429,13 +434,19 @@ header {
 }
 
 .custom-divider-text, .content-divider-text a {
+    padding: 0!important;
     background-color: $mainBlue;
     @include body-text;
     color: $white;
     font-size: 14px;
     margin: 0 10px;
     font-weight: 500;
-    
+    white-space: normal !important;  // allow wrapping (override nowrap)
+    word-wrap: break-word;           // break long words if needed
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: inline-block;           // so max-width applies properly
+    box-sizing: border-box;
 }
 
 /* -------------------- Media Queries ---------------------- */
@@ -690,7 +701,7 @@ header {
   }
 
   .hero {
-    padding: 20 20px;
+    padding: 20px;
   }
 
   .hero-container {
@@ -698,7 +709,7 @@ header {
     text-align: center;
     gap: 24px;
     min-height: auto;
-    padding: 10px 0;
+    padding: 0;
 
     .hero-logo img {
       width: 180px;
@@ -742,6 +753,7 @@ header {
 
   .games-intro h2, .materials-intro h2, .carousel-container h2, .about-container h2, .grade-intro h2 {
     font-size: 40px!important;
+    padding: 0 0 8px 0!important;
   }
 
   .games-container {
@@ -772,6 +784,7 @@ header {
 
   .carousel-container {
     padding: 20 30px 0 30;
+    gap: 8px;
     .custom-video-container {
       width: 100%;
     }
@@ -802,7 +815,7 @@ header {
   .materials-wrapper {
     align-items: flex-start;
     padding: 20px!important;
-    gap: 24px;
+    gap: 16px;
     width: 100%;
     max-width: 100%; // ensures it won't overflow
     overflow-x: hidden; // optional safety net
@@ -842,7 +855,10 @@ header {
     text-align: center;
     .grade-intro {
       padding: 0 0 16px 0;
-        h3{font-size: 35px!important;}
+        h3{
+          font-size: 35px!important;
+          padding: 0 0 8px 0;
+        }
         p {
           @include body-text-mobile;
           padding: 0;
@@ -912,7 +928,7 @@ header {
   }
 
   .footer-wrapper {
-    padding: 20px 20 0 20;
+    padding: 20px;
     gap: 16px;
     .footer-logos {
       justify-content: center; // center logos
@@ -934,11 +950,15 @@ header {
       }
     }
   }
+
+  .uk-flex {
+    padding: 0px 24px;
+  }
+
   .uk-flex.uk-flex-middle.uk-text-center.uk-margin {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 8px;
   }
 
   .custom-divider-text {
