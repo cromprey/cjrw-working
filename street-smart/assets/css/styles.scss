@@ -575,6 +575,9 @@ header {
 
     .grade-intro {
       padding: 0 0px 16px;
+      h3{
+        font-size: 48px;
+      }
       p {
         @include body-text-tablet;
         padding: 0 6px!important;

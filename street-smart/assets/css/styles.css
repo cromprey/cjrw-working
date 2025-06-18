@@ -702,6 +702,9 @@ header p {
   .materials-wrapper .grade-intro {
     padding: 0 0px 16px;
   }
+  .materials-wrapper .grade-intro h3 {
+    font-size: 48px;
+  }
   .materials-wrapper .grade-intro p {
     font-family: "acumin-variable", sans-serif;
     font-variation-settings: "wght" 350, "wdth" 110, "slnt" 0;
