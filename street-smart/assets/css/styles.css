@@ -765,6 +765,7 @@ header p {
     margin: 0;
     color: #E8EEF6;
     padding: 0 32px;
+    color: #B9E2D9 !important;
   }
   .footer-wrapper {
     padding: 32px 32px 0 32px;
@@ -1029,6 +1030,7 @@ header p {
     margin: 0;
     color: #E8EEF6;
     padding: 0 32px;
+    color: #B9E2D9 !important;
   }
   .footer-wrapper {
     padding: 20px;

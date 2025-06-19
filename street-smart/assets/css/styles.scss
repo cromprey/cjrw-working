@@ -634,6 +634,7 @@ header {
     .about-container {
       p {
         @include body-text-tablet;
+        color: $mainTeal!important;
       }
     }
   }
@@ -912,6 +913,7 @@ header {
     .about-container {
       p {
         @include body-text-mobile;
+        color: $mainTeal!important;
       }
     }
   }
